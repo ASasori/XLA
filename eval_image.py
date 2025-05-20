@@ -8,11 +8,11 @@ from skimage import img_as_float32
 # from piq.quality_metrics import niqe
 # Đọc ảnh ground-truth và ảnh SR
 #gt = cv2.imread("./data/SRGAN_ImageNet/ILSVRC2012_val_00000045.JPEG")
-gt = cv2.imread("./figure/ILSVRC2012_val_00000212.JPEG")
-gt = cv2.imread("./figure/0001.png")
+# gt = cv2.imread("./figure/ILSVRC2012_val_00000212.JPEG")
+gt = cv2.imread("./data/Set5/X4/GT/head.png")
 #sr = cv2.imread("./figure/srganx4_dog_lastest.jpg")
 # sr = cv2.imread("./figure/sr_ILSVRC2012_val_00000212.JPEG")
-sr = cv2.imread("./figure/srresnetx4_0001_lastest.jpg")
+sr = cv2.imread("./outputs/upscaled.png")
 # Resize ảnh ground-truth nếu kích thước không khớp
 gt = cv2.resize(gt, (sr.shape[1], sr.shape[0]))
 

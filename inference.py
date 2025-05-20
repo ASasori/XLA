@@ -70,11 +70,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--inputs",
                         type=str,
-                        default="./figure/lr_0001.png",
+                        default="./outputs/input.png",
                         help="Original image path.")
     parser.add_argument("--output",
                         type=str,
-                        default="./figure/srresnetx4_0001_latest.jpg",
+                        default="./outputs/upscaled.png",
                         help="Super-resolution image path.")
     parser.add_argument("--model_arch_name",
                         type=str,
@@ -86,7 +86,7 @@ if __name__ == "__main__":
                         help="Whether to compile the model state.")
     parser.add_argument("--model_weights_path",
                         type=str,
-                        default="./results/SRResNet_x4-SRGAN_DIV2K/g_best.pth.tar",
+                        default="./results/pretrained_models/SRResNet_x4-SRGAN_ImageNet.pth.tar",
                         help="Model weights file path.")
     parser.add_argument("--half",
                         action="store_true",
