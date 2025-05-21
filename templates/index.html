@@ -46,7 +46,14 @@
                     <img id="loading-image" src="/static/loading.png" alt="Loading">
                 </div>
                 <img id="output-image" src="" alt="Output Image">
+                <div class="container" id="download-container" style="display: none;">
+                    <a id="download-link" href="#" download="upscaled_image.png">
+                        <button type="button">Download Output Image</button>
+                    </a>
+                </div>
             </div>
+            <!-- Nút tải xuống -->
+            
         </div>
     </div>
 
@@ -119,6 +126,11 @@
                 if (response.status === 200) {
                     image.src = '/outputs/upscaled.png';
                     image.style.display = 'flex';
+
+                    var downloadContainer = document.getElementById('download-container');
+                    var downloadLink = document.getElementById('download-link');
+                    downloadLink.href = '/outputs/upscaled.png';
+                    downloadContainer.style.display = 'block'; // Hiển thị nút tải xuống
                 } else {
                     setTimeout(checkImageAvailability, 100);
                 }
